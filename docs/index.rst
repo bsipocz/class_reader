@@ -7,7 +7,7 @@ this package is here:
 .. toctree::
   :maxdepth: 2
 
-  packagename/index.rst
+  class_reader/index.rst
 
 .. note:: Do not edit this page - instead, place all documentation for the
-          affiliated package inside ``packagename/``
+          affiliated package inside ``class_reader/``
