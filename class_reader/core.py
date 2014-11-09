@@ -250,12 +250,20 @@ class ClassObject(object):
         return [ii for ii,k in enumerate(sel) if k]
 
     def get_spectra(self, progressbar=True, **kwargs):
+        """
+        Get the spectra as a list of (spectrum, header) pairs
+        """
         selected_indices = self.select_spectra(**kwargs)
 
         return self.read_observations(selected_indices,
                                       progressbar=progressbar)
 
     def get_pyspeckit_spectra(self, progressbar=True, **kwargs):
+        """
+        Get the spectra as a list of pyspeckit objects
+        """
+
+        import pyspeckit
 
         spdata = self.get_spectra(progressbar=progressbar, **kwargs)
 
